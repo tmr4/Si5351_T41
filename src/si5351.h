@@ -41,7 +41,7 @@
 #define SI5351_FREQ_MULT                100ULL
 #define SI5351_DEFAULT_CLK              1000000000ULL
 
-#define SI5351_PLL_VCO_MIN              600000000
+#define SI5351_PLL_VCO_MIN              400000000 // relax min freq
 #define SI5351_PLL_VCO_MAX              900000000
 #define SI5351_MULTISYNTH_MIN_FREQ      500000
 #define SI5351_MULTISYNTH_DIVBY4_FREQ   150000000

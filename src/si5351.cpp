@@ -1338,7 +1338,9 @@ uint8_t Si5351::si5351_read(uint8_t addr)
 	Wire.write(addr);
 	Wire.endTransmission();
 
-	Wire.requestFrom(i2c_bus_addr, (uint8_t)1);
+  // keep connection open!
+  // this is needed for low frequency tune on T41 which requires precise timing
+	Wire.requestFrom(i2c_bus_addr, (uint8_t)1, (uint8_t)0);
 
 	while(Wire.available())
 	{
